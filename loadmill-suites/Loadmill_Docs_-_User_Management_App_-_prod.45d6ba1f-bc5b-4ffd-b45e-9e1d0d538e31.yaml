@@ -194,7 +194,7 @@ flows:
         
         - description: Get a list of projects
           method: GET
-          url: ${origin_1}/v2/projects
+          url: ${origin_1}/v2/projects?myprojects
           headers:
             - accept: "*/*"
             - accept-language: en-US,en;q=0.9
