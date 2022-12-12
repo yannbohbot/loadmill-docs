@@ -1,0 +1,501 @@
+conf:
+  meta:
+    description: Loadmill Docs - User Management App - prod
+  auth:
+    user: loadmill
+    password: loadmillisawesome!
+  useCookies: true
+  cookiesScope: Suite
+  parameters:
+    - origin_1: https://api.permit.io
+    - origin_2: https://auth.permit.io
+    - email_in_request_body: user@loadmill.com
+    - uuid: ${__random_uuid()}
+  loginFlow: []
+  authenticationHeaders:
+    - authorization: Bearer
+        eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+    - cookie: _ga=GA1.1.789178996.1668602998;
+        hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+        _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+        _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+        __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+        __hssc=66103857.1.1670496164233;
+        permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+        _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+  parametersScope: SUITE
+flows:
+  - id: 4b2fa25a-835a-48b6-b8f6-df87c8e26128
+    order: 0
+    conf:
+      meta:
+        description: Create environment
+      requests:
+        
+        - description: Get a list of all projects
+          method: GET
+          url: ${origin_1}/v2/projects
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_1st_in_response_body_1:
+                jsonPath: $[0]["id"]
+            - id_of_2nd_in_response_body_1:
+                jsonPath: $[1]["id"]
+          assert: []
+
+        - description: Create a new environment in the first project
+          method: POST
+          url: ${origin_1}/v2/projects/${__encode_url(id_of_1st_in_response_body_1)}/envs
+          postData:
+            text: |-
+              {
+                "key": "staging",
+                "name": "staging"
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - env_id:
+                jsonPath: $["id"]
+          assert: []
+
+        - description: Get a list of all environments in the first project
+          method: GET
+          url: ${origin_1}/v2/projects/${__encode_url(id_of_1st_in_response_body_1)}/envs
+          disabled: false
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+    runInCi: false
+    assignedLabelsIds:
+      - id: 4d515ce0-55fe-4b64-bcc4-09514daa8064
+  - id: 81d8c55b-0d36-4a8d-be76-350c5def84c4
+    order: 1
+    conf:
+      meta:
+        description: Create Role & Ressource
+      requests:
+        
+        - description: Get a list of projects
+          method: GET
+          url: ${origin_1}/v2/projects
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_1st_in_response_body_1:
+                jsonPath: $[0]["id"]
+          assert: []
+
+        - description: Get a list of environments for the first project
+          method: GET
+          url: ${origin_1}/v2/projects/${__encode_url(id_of_1st_in_response_body_1)}/envs
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_3rd_in_response_body_2:
+                jsonPath: $[2]["id"]
+          assert: []
+
+        - description: Create a role in the first project and third environment
+          method: POST
+          url: ${origin_1}/v2/schema/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/roles
+          postData:
+            text: |-
+              {
+                "key": "viewer",
+                "name": "viewer",
+                "description": "can view"
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - role_id:
+                jsonPath: $["id"]
+
+        - description: Create a resource in the first project and third environment
+          method: POST
+          url: ${origin_1}/v2/schema/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/resources
+          postData:
+            text: |-
+              {
+                "key": "crud",
+                "name": "crud",
+                "actions": {
+                  "create": {
+                    "name": "create"
+                  },
+                  "read": {
+                    "name": "read"
+                  },
+                  "update": {
+                    "name": "update"
+                  },
+                  "delete": {
+                    "name": "delete"
+                  }
+                },
+                "attributes": {}
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+        - description: Get a list of condition sets in the first project and third
+            environment
+          method: GET
+          url: ${origin_1}/v2/schema/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/condition_sets?type=resourceset
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+    runInCi: false
+    assignedLabelsIds:
+      - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+  - id: 03d32e1c-3bf8-4136-90e8-598531612606
+    order: 2
+    conf:
+      meta:
+        description: Create User
+      requests:
+        
+        - description: Get a list of projects
+          method: GET
+          url: ${origin_1}/v2/projects
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_1st_in_response_body_1:
+                jsonPath: $[0]["id"]
+          assert: []
+
+        - description: Get a list of environments for the first project
+          method: GET
+          url: ${origin_1}/v2/projects/${__encode_url(id_of_1st_in_response_body_1)}/envs
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_3rd_in_response_body_2:
+                jsonPath: $[2]["id"]
+          assert: []
+
+        - description: Get a list of tenants for the first environment of the first project
+          method: GET
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/tenants
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - id_of_1st_in_response_body_3:
+                jsonPath: $[0]["id"]
+          assert: []
+
+        - description: Create a user
+          method: POST
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/users
+          postData:
+            text: |-
+              {
+                "key": "testuser@loadmill.com",
+                "email": "${__escape_quotes(email_in_request_body)}",
+                "first_name": "John",
+                "last_name": "Load"
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+          extract:
+            - user_id:
+                jsonPath: $["id"]
+            - user_email:
+                jsonPath: $["key"]
+          assert: []
+
+        - description: Assign a role to the user
+          method: POST
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/role_assignments
+          disabled: true
+          postData:
+            text: |-
+              {
+                "role": "${role_id}",
+                "tenant": "${__escape_quotes(id_of_1st_in_response_body_3)}",
+                "user": "${user_email}"
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+        - description: Update the user
+          method: PATCH
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/users/${__encode_url(user_id)}
+          disabled: true
+          postData:
+            text: |-
+              {
+                "attributes": {
+                  "data": "is the best user for testing"
+                }
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+        - description: Delete the user
+          method: DELETE
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/users/${__encode_url(user_id)}
+          disabled: true
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+        - description: Get a list of users for the first tenant of the first environment
+            of the first project
+          method: GET
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/tenants/${__encode_url(id_of_1st_in_response_body_3)}/users?search=&page=1&per_page=10
+          disabled: true
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+    runInCi: false
+    assignedLabelsIds:
+      - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+      - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
+  - id: 7f1fdeee-f07e-4cf3-9a8f-c62ea6f2f8d8
+    order: 3
+    conf:
+      meta:
+        description: Assign User Role
+      requests:
+        
+        - description: Assign a role to the user
+          method: POST
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/role_assignments
+          disabled: false
+          postData:
+            text: |-
+              {
+                "role": "${role_id}",
+                "tenant": "${__escape_quotes(id_of_1st_in_response_body_3)}",
+                "user": "${user_email}"
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+    runInCi: false
+    assignedLabelsIds:
+      - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+  - id: cf72f6a2-f63d-42b7-8fbc-453990af0e2c
+    order: 4
+    conf:
+      meta:
+        description: Assign User Attributes
+      requests:
+        
+        - description: Update the user
+          method: PATCH
+          url: ${origin_1}/v2/facts/${__encode_url(id_of_1st_in_response_body_1)}/${__encode_url(env_id)}/users/${__encode_url(user_id)}
+          disabled: false
+          postData:
+            text: |-
+              {
+                "attributes": {
+                  "data": "is the best user for testing",
+                  "uuid": "${uuid}"
+                }
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+
+    runInCi: false
+    assignedLabelsIds:
+      - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+dependencies:
+  hooks:
+    beforeAll:
+      id: c7ae07e1-84bd-403b-9dfd-ce7d3e074147
+      conf:
+        meta: {}
+        requests:
+          
+          - description: Get all projects
+            method: GET
+            url: ${origin_1}/v2/projects
+            headers:
+              - accept: "*/*"
+              - accept-language: en-US,en;q=0.9
+              - authorization: Bearer
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+              - referer: https://app.permit.io/
+              - cookie: _ga=GA1.1.789178996.1668602998;
+                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                  __hssc=66103857.1.1670496164233;
+                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+            extract:
+              - id_of_1st_in_response_body_1:
+                  jsonPath: $[0]["id"]
+            assert: []
+
+          - description: Create a new project
+            method: POST
+            url: ${origin_1}/v2/projects
+            postData:
+              text: |-
+                {
+                  "key": "loadmill-testing_${__random_number('5')}",
+                  "name": "Loadmill Testing",
+                  "description": ""
+                }
+              mimeType: application/json
+            headers:
+              - accept: "*/*"
+              - accept-language: en-US,en;q=0.9
+              - authorization: Bearer
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+              - referer: https://app.permit.io/
+              - cookie: _ga=GA1.1.789178996.1668602998;
+                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                  __hssc=66103857.1.1670496164233;
+                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+            extract:
+              - project_id:
+                  jsonPath: $["id"]
+            assert: []
+
+    afterAll:
+      id: 269f5589-88aa-49dc-b138-a5b2eb7bbaa1
+      conf:
+        meta: {}
+        requests:
+          
+          - description: Delete a project
+            method: DELETE
+            url: ${origin_1}/v2/projects/${__encode_url(project_id)}
+            disabled: false
+            headers:
+              - accept: "*/*"
+              - accept-language: en-US,en;q=0.9
+              - authorization: Bearer
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+              - referer: https://app.permit.io/
+              - cookie: _ga=GA1.1.789178996.1668602998;
+                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                  __hssc=66103857.1.1670496164233;
+                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+
+          - description: Get all projects
+            method: GET
+            url: ${origin_1}/v2/projects
+            disabled: false
+            headers:
+              - accept: "*/*"
+              - accept-language: en-US,en;q=0.9
+              - authorization: Bearer
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+              - referer: https://app.permit.io/
+              - cookie: _ga=GA1.1.789178996.1668602998;
+                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                  __hssc=66103857.1.1670496164233;
+                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+
+  labels:
+    - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
+      description: sanity
+      color: "#eb5a46"
+    - id: 4d515ce0-55fe-4b64-bcc4-09514daa8064
+      description: sanity
+      color: "#eb5a46"
+    - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+      description: operation
+      color: "#0079bf"
+  login:
+    id: 72bce33c-b4d7-4846-9d61-897ac1b1566e
