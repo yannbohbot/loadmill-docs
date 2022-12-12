@@ -1,6 +1,6 @@
 conf:
   meta:
-    description: Loadmill Docs - User Management App - prod2
+    description: Loadmill Docs - User Management App - prod
   auth:
     user: loadmill
     password: loadmillisawesome!
