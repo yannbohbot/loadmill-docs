@@ -82,7 +82,7 @@ flows:
 
     runInCi: false
     assignedLabelsIds:
-      - id: 4d515ce0-55fe-4b64-bcc4-09514daa8064
+      - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
   - id: 81d8c55b-0d36-4a8d-be76-350c5def84c4
     order: 1
     conf:
@@ -194,7 +194,7 @@ flows:
         
         - description: Get a list of projects
           method: GET
-          url: ${origin_1}/v2/projects?myprojects
+          url: ${origin_1}/v2/projects
           headers:
             - accept: "*/*"
             - accept-language: en-US,en;q=0.9
@@ -490,10 +490,7 @@ dependencies:
   labels:
     - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
       description: sanity
-      color: "#eb5a46"
-    - id: 4d515ce0-55fe-4b64-bcc4-09514daa8064
-      description: sanity
-      color: "#eb5a46"
+      color: hsl(7, 80%, 70%)
     - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
       description: operation
       color: "#0079bf"
