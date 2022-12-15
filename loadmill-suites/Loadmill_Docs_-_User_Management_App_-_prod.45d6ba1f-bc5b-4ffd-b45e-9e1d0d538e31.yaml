@@ -11,6 +11,9 @@ conf:
     - origin_2: https://auth.permit.io
     - email_in_request_body: user@loadmill.com
     - uuid: ${__random_uuid()}
+    - project_id: ""
+    - env_id: ""
+    - role_id: ""
   loginFlow: []
   authenticationHeaders:
     - authorization: Bearer
@@ -25,8 +28,68 @@ conf:
         _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
   parametersScope: SUITE
 flows:
-  - id: 4b2fa25a-835a-48b6-b8f6-df87c8e26128
+  - id: 21d7a3e5-126b-444d-92bd-8ef3e25f474f
     order: 0
+    conf:
+      meta:
+        description: Create Project
+      requests:
+        
+        - description: Get all projects
+          method: GET
+          url: ${origin_1}/v2/projects
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+            - cookie: _ga=GA1.1.789178996.1668602998;
+                hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                __hssc=66103857.1.1670496164233;
+                permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+          extract:
+            - id_of_1st_in_response_body_1:
+                jsonPath: $[0]["id"]
+          assert: []
+
+        - description: Create a new project
+          method: POST
+          url: ${origin_1}/v2/projects
+          postData:
+            text: |-
+              {
+                "key": "loadmill-testing_${__random_number('5')}",
+                "name": "Loadmill Testing",
+                "description": ""
+              }
+            mimeType: application/json
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+            - cookie: _ga=GA1.1.789178996.1668602998;
+                hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                __hssc=66103857.1.1670496164233;
+                permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+          extract:
+            - project_id:
+                jsonPath: $["id"]
+          assert: []
+
+    runInCi: false
+  - id: 4b2fa25a-835a-48b6-b8f6-df87c8e26128
+    order: 1
     conf:
       meta:
         description: Create environment
@@ -84,7 +147,7 @@ flows:
     assignedLabelsIds:
       - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
   - id: 81d8c55b-0d36-4a8d-be76-350c5def84c4
-    order: 1
+    order: 2
     conf:
       meta:
         description: Create Role & Ressource
@@ -186,7 +249,7 @@ flows:
     assignedLabelsIds:
       - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
   - id: 03d32e1c-3bf8-4136-90e8-598531612606
-    order: 2
+    order: 3
     conf:
       meta:
         description: Create User
@@ -325,7 +388,7 @@ flows:
       - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
       - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
   - id: 7f1fdeee-f07e-4cf3-9a8f-c62ea6f2f8d8
-    order: 3
+    order: 4
     conf:
       meta:
         description: Assign User Role
@@ -354,7 +417,7 @@ flows:
     assignedLabelsIds:
       - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
   - id: cf72f6a2-f63d-42b7-8fbc-453990af0e2c
-    order: 4
+    order: 5
     conf:
       meta:
         description: Assign User Attributes
@@ -383,110 +446,64 @@ flows:
     runInCi: false
     assignedLabelsIds:
       - id: 70b06f73-5c2b-4782-aff4-df4b6911354f
+  - id: fb2c91d6-fe31-4012-a442-20e366b92d84
+    order: 6
+    conf:
+      meta:
+        description: Delete Project
+      requests:
+        
+        - description: Delete a project
+          method: DELETE
+          url: ${origin_1}/v2/projects/${__encode_url(project_id)}
+          disabled: false
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+            - cookie: _ga=GA1.1.789178996.1668602998;
+                hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                __hssc=66103857.1.1670496164233;
+                permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+
+        - description: Get all projects
+          method: GET
+          url: ${origin_1}/v2/projects
+          disabled: false
+          headers:
+            - accept: "*/*"
+            - accept-language: en-US,en;q=0.9
+            - authorization: Bearer
+                eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
+            - referer: https://app.permit.io/
+            - cookie: _ga=GA1.1.789178996.1668602998;
+                hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
+                _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
+                _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
+                __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
+                __hssc=66103857.1.1670496164233;
+                permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
+                _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
+
+    runInCi: false
 dependencies:
   hooks:
     beforeAll:
       id: c7ae07e1-84bd-403b-9dfd-ce7d3e074147
       conf:
         meta: {}
-        requests:
-          
-          - description: Get all projects
-            method: GET
-            url: ${origin_1}/v2/projects
-            headers:
-              - accept: "*/*"
-              - accept-language: en-US,en;q=0.9
-              - authorization: Bearer
-                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
-              - referer: https://app.permit.io/
-              - cookie: _ga=GA1.1.789178996.1668602998;
-                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
-                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
-                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
-                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
-                  __hssc=66103857.1.1670496164233;
-                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
-                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
-            extract:
-              - id_of_1st_in_response_body_1:
-                  jsonPath: $[0]["id"]
-            assert: []
-
-          - description: Create a new project
-            method: POST
-            url: ${origin_1}/v2/projects
-            postData:
-              text: |-
-                {
-                  "key": "loadmill-testing_${__random_number('5')}",
-                  "name": "Loadmill Testing",
-                  "description": ""
-                }
-              mimeType: application/json
-            headers:
-              - accept: "*/*"
-              - accept-language: en-US,en;q=0.9
-              - authorization: Bearer
-                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
-              - referer: https://app.permit.io/
-              - cookie: _ga=GA1.1.789178996.1668602998;
-                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
-                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
-                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
-                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
-                  __hssc=66103857.1.1670496164233;
-                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
-                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
-            extract:
-              - project_id:
-                  jsonPath: $["id"]
-            assert: []
-
+        requests: []
     afterAll:
       id: 269f5589-88aa-49dc-b138-a5b2eb7bbaa1
       conf:
         meta: {}
-        requests:
-          
-          - description: Delete a project
-            method: DELETE
-            url: ${origin_1}/v2/projects/${__encode_url(project_id)}
-            disabled: false
-            headers:
-              - accept: "*/*"
-              - accept-language: en-US,en;q=0.9
-              - authorization: Bearer
-                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
-              - referer: https://app.permit.io/
-              - cookie: _ga=GA1.1.789178996.1668602998;
-                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
-                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
-                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
-                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
-                  __hssc=66103857.1.1670496164233;
-                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
-                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
-
-          - description: Get all projects
-            method: GET
-            url: ${origin_1}/v2/projects
-            disabled: false
-            headers:
-              - accept: "*/*"
-              - accept-language: en-US,en;q=0.9
-              - authorization: Bearer
-                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkdvVGhrRlJMbkVTdU5TMzdSNnZLTSJ9.eyJpc3MiOiJodHRwczovL2F1dGgucGVybWl0LmlvLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTExNzk2Mjc2MjkxMzc5Mjg3MTg4IiwiYXVkIjpbImh0dHBzOi8vYXBpLnBlcm1pdC5pby92MS8iLCJodHRwczovL3Byb2QtcGVybWl0LWlvLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzA0OTMzMjUsImV4cCI6MTY3MDU3OTcyNSwiYXpwIjoiUHQ3cldKNEJZbHBFTE5JZExnNkNpejdLUTJDMDY4QzEiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIn0.qqTj2iNBIHaE1_65Gn83XRuVws396OvP7j-pGektMOTJ0zvI9j43LmhdfmXQnhpYeH-aW0Z-tAGyuxjCrZejt-nF7yhnwlRK_WTgeh7lvomToHs2KGrtEZxdmYZd5YGz-87-NckW7nxlUf6z5FyBa6wQW288Qh_SiEpYF-WVouE15BP93YI6J0EbdrY20UxUT736OKTJ3Yq4Uqe2zs4Qtvs6otkqGoRmuPnskW_XDjdu7_xTpInBK0MK45BEMexfIUW_ndb002M2sywZNx7NfAt2vCxDptyjoEy3FAXPvmNGFW_l_MPqde4rj1SavUiHIDnTJScCaTPzy1Y3QXvGbQ
-              - referer: https://app.permit.io/
-              - cookie: _ga=GA1.1.789178996.1668602998;
-                  hubspotutk=763bb789d466f0f537175b652e23757e; __hssrc=1;
-                  _lr_id=eyJlbWFpbCI6Inlhbm5AbG9hZG1pbGwuY29tIiwiZnVsbE5hbWUiOiJZYW5uIGJvaGJvdCJ9;
-                  _ga_S2W3HZX9EZ=GS1.1.1670450242.3.1.1670450256.0.0.0;
-                  __hstc=66103857.763bb789d466f0f537175b652e23757e.1668602999517.1670493319616.1670496164233.11;
-                  __hssc=66103857.1.1670496164233;
-                  permit_session=permit_session_eyJhbGciOiJSUzI1NiIsImtpZCI6InY4bXNIRkQyK0JXeC9ramZUNFpLY2lQZXJ1bFNabkZhTkhlL3g0VS96Q0k9IiwidHlwIjoiSldUIn0.eyJsb2dpbl9pZCI6IkZGb1pGMzNVR1o5eDl1TnJxQUw1RUlza09PNWxYZUY2MDBqVjV6VHhRbFZiUzI3V29IZG5mUGU2RnFpRXZzQVFKV1BNT0p3UEw3WFA4N1E5eWlQOFhqIiwidHMiOjE2NzA0OTY5NTg5ODEsImFjdGl2ZV9vcmdfaWQiOiIxNWE2ZGViNTFlMzU0MWM1OWZmMjFhMDI2MmQ5ZThiMCJ9.GUxJjWDgLYZDiwV4jmTa4bppCd63Is0zzOD1s08Yer-Lhz0rGCJDZZ_SKqLab6QekgOkfLHRDOwxZ3f69EvkwKlSsUsFssUxMjk2IM7Ydu17FP_JDkCn20eD0hHGTLZ9AD8MehGR7wJaKO69zlbMiX8OeJ6bGLTO_kh1UyOELxcD3_n_jLMxUq8fYzpgmm7EZYhGpNM9tb5DCSL-9q_EegZ7pT0nT-_67A2qtHWOOzRE0NmXa0_qiS_qoWe7SVidXkE9ktHq3Lel8PXVLjGlEM7JQG8dbqNblhAkWEEp3h0iLAWl7LzqivOf3C9JQp8wf1X5aBfeA3gc8Nu8t9xhpKYsA3oPBziPrardrvGPlwRHpiYwKqZr5-ovmgD-lGfVaNCLYAuyBQg8DjYOgdQLvaMC33RGwr42izDGCTh6XIr82FT3odL4-rwwCCF5Cj-p37xm3iCnKtoUnboS6AYShp3agfQXZCBXkXYlesgxPFo5M3G-A9GdrvER3T2NzQVyjO8kRjDklgnhlEV3irhGHO9mO2uwokcjkgY3_krGAne2qJZGg3d4b_pfaDBYyHMAkaPXrs47Z4-2BBtZecv0i_83APSrn8NDlmLOwV9-WsyxBvUwlTszpKtgcFn5Wmnjeb58vIkK35SNCTPQ9m8QqoHaT5VSicJnjqUpQfmsOJ4;
-                  _ga_SPFKH5NXDE=GS1.1.1670496163.14.1.1670497000.0.0.0
-
+        requests: []
   labels:
     - id: 1e57e32a-0890-44dd-a703-21bdb4ece8a9
       description: sanity
